@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>macaca.webdriver &mdash; wd.py 0.1.1 documentation</title>
+    <title>macaca.webdriver &mdash; wd.py 0.1.3 documentation</title>
     
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.1.1',
+        VERSION:     '0.1.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="wd.py 0.1.1 documentation" href="../../index.html" />
+    <link rel="top" title="wd.py 0.1.3 documentation" href="../../index.html" />
     <link rel="up" title="Module code" href="../index.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
@@ -46,7 +46,7 @@
 <span class="c1"># WebDriver Protocol Implemenation</span>
 <span class="c1">#</span>
 
-<span class="kn">from</span> <span class="nn">base64</span> <span class="k">import</span> <span class="n">decodebytes</span>
+<span class="kn">from</span> <span class="nn">base64</span> <span class="k">import</span> <span class="n">b64decode</span>
 
 <span class="kn">from</span> <span class="nn">retrying</span> <span class="k">import</span> <span class="n">retry</span>
 
@@ -60,7 +60,7 @@
 <span class="kn">from</span> <span class="nn">.webelement</span> <span class="k">import</span> <span class="n">WebElement</span>
 
 
-<div class="viewcode-block" id="WebDriver"><a class="viewcode-back" href="../../api.html#macaca.webdriver.WebDriver">[docs]</a><span class="k">class</span> <span class="nc">WebDriver</span><span class="p">:</span>
+<div class="viewcode-block" id="WebDriver"><a class="viewcode-back" href="../../api.html#macaca.webdriver.WebDriver">[docs]</a><span class="k">class</span> <span class="nc">WebDriver</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The WebDriver Object to implement most part of WebDriver protocol.</span>
 
 <span class="sd">    Attributes:</span>
@@ -128,7 +128,7 @@
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">and</span> <span class="s1">&#39;ELEMENT&#39;</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
             <span class="n">element_id</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ELEMENT&#39;</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">WebElement</span><span class="p">(</span><span class="n">element_id</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_unwrap_el</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">value</span>
@@ -146,7 +146,7 @@
             <span class="k">return</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wrap_el</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">WebElement</span><span class="p">):</span>
             <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;ELEMENT&#39;</span><span class="p">:</span> <span class="n">value</span><span class="o">.</span><span class="n">element_id</span><span class="p">}</span>
-        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_wrap_el</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">value</span>
@@ -410,7 +410,7 @@
 
     <span class="nd">@fluent</span>
 <div class="viewcode-block" id="WebDriver.tap"><a class="viewcode-back" href="../../api.html#macaca.webdriver.WebDriver.tap">[docs]</a>    <span class="k">def</span> <span class="nf">tap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Single tap on the touch enabled device..</span>
+        <span class="sd">&quot;&quot;&quot;Single tap on the touch enabled device.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            element(WebElement): WebElement Object to single tap on.</span>
@@ -423,7 +423,30 @@
         <span class="p">})</span></div>
 
     <span class="nd">@fluent</span>
-<div class="viewcode-block" id="WebDriver.keys"><a class="viewcode-back" href="../../api.html#macaca.webdriver.WebDriver.keys">[docs]</a>    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="WebDriver.swipe"><a class="viewcode-back" href="../../api.html#macaca.webdriver.WebDriver.swipe">[docs]</a>    <span class="k">def</span> <span class="nf">swipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">startX</span><span class="p">,</span> <span class="n">startY</span><span class="p">,</span> <span class="n">endX</span><span class="p">,</span> <span class="n">endY</span><span class="p">,</span> <span class="n">duration</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Swipe on the touch screen using finger motion events.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            startX(Float): The x-coordinate of start point.</span>
+<span class="sd">            startY(Float): The y-coordinate of start point.</span>
+<span class="sd">            endX(Float): The x-coordinate of end point.</span>
+<span class="sd">            endY(Float): The y-coordinate of end point.</span>
+<span class="sd">            duration(Float): The duration in ms.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            WebDriver object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">SWIPE_ELEMENT</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s1">&#39;element_id&#39;</span><span class="p">:</span> <span class="s1">&#39;temp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;startX&#39;</span><span class="p">:</span> <span class="n">startX</span><span class="p">,</span>
+            <span class="s1">&#39;startY&#39;</span><span class="p">:</span> <span class="n">startY</span><span class="p">,</span>
+            <span class="s1">&#39;endX&#39;</span><span class="p">:</span> <span class="n">endX</span><span class="p">,</span>
+            <span class="s1">&#39;endY&#39;</span><span class="p">:</span> <span class="n">endY</span><span class="p">,</span>
+            <span class="s1">&#39;duration&#39;</span><span class="p">:</span> <span class="n">duration</span>
+        <span class="p">})</span></div>
+
+    <span class="nd">@fluent</span>
+<div class="viewcode-block" id="WebDriver.send_keys"><a class="viewcode-back" href="../../api.html#macaca.webdriver.WebDriver.send_keys">[docs]</a>    <span class="k">def</span> <span class="nf">send_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Send a sequence of key strokes.</span>
 
 <span class="sd">        Args:</span>
@@ -651,7 +674,7 @@
         <span class="n">imgData</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">take_screenshot</span><span class="p">()</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">decodebytes</span><span class="p">(</span><span class="n">imgData</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)))</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b64decode</span><span class="p">(</span><span class="n">imgData</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)))</span>
         <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">quietly</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="n">err</span></div>
@@ -737,7 +760,7 @@
 
 <div class="viewcode-block" id="WebDriver.wait_for"><a class="viewcode-back" href="../../api.html#macaca.webdriver.WebDriver.wait_for">[docs]</a>    <span class="k">def</span> <span class="nf">wait_for</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
-        <span class="o">*</span><span class="p">,</span> <span class="n">asserter</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">asserter</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Wait for driver till satisfy the given condition</span>
 
 <span class="sd">        Args:</span>
@@ -751,7 +774,7 @@
 <span class="sd">        Raises:</span>
 <span class="sd">            WebDriverException.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">asserter</span><span class="p">,</span> <span class="s1">&#39;__call__&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">asserter</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Asserter must be callable.&#39;</span><span class="p">)</span>
         <span class="nd">@retry</span><span class="p">(</span>
             <span class="n">retry_on_exception</span><span class="o">=</span><span class="k">lambda</span> <span class="n">ex</span><span class="p">:</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="n">WebDriverException</span><span class="p">),</span>
@@ -766,7 +789,7 @@
 
 <div class="viewcode-block" id="WebDriver.wait_for_element"><a class="viewcode-back" href="../../api.html#macaca.webdriver.WebDriver.wait_for_element">[docs]</a>    <span class="k">def</span> <span class="nf">wait_for_element</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">using</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
-        <span class="n">interval</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">asserter</span><span class="o">=</span><span class="n">is_displayed</span><span class="p">):</span>
+        <span class="n">interval</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">asserter</span><span class="o">=</span><span class="n">is_displayed</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Wait for element till satisfy the given condition</span>
 
 <span class="sd">        Args:</span>
@@ -782,7 +805,7 @@
 <span class="sd">        Raises:</span>
 <span class="sd">            WebDriverException.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">asserter</span><span class="p">,</span> <span class="s1">&#39;__call__&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">asserter</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Asserter must be callable.&#39;</span><span class="p">)</span>
         <span class="nd">@retry</span><span class="p">(</span>
             <span class="n">retry_on_exception</span><span class="o">=</span><span class="k">lambda</span> <span class="n">ex</span><span class="p">:</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="n">WebDriverException</span><span class="p">),</span>
@@ -798,7 +821,7 @@
 
 <div class="viewcode-block" id="WebDriver.wait_for_elements"><a class="viewcode-back" href="../../api.html#macaca.webdriver.WebDriver.wait_for_elements">[docs]</a>    <span class="k">def</span> <span class="nf">wait_for_elements</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">using</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
-        <span class="n">interval</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">asserter</span><span class="o">=</span><span class="n">is_displayed</span><span class="p">):</span>
+        <span class="n">interval</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">asserter</span><span class="o">=</span><span class="n">is_displayed</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Wait for elements till satisfy the given condition</span>
 
 <span class="sd">        Args:</span>
@@ -814,7 +837,7 @@
 <span class="sd">        Raises:</span>
 <span class="sd">            WebDriverException.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">asserter</span><span class="p">,</span> <span class="s1">&#39;__call__&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">asserter</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Asserter must be callable.&#39;</span><span class="p">)</span>
         <span class="nd">@retry</span><span class="p">(</span>
             <span class="n">retry_on_exception</span><span class="o">=</span><span class="k">lambda</span> <span class="n">ex</span><span class="p">:</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="n">WebDriverException</span><span class="p">),</span>

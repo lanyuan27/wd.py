@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>API &mdash; wd.py 0.1.1 documentation</title>
+    <title>API &mdash; wd.py 0.1.3 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.1.1',
+        VERSION:     '0.1.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="wd.py 0.1.1 documentation" href="index.html" />
+    <link rel="top" title="wd.py 0.1.3 documentation" href="index.html" />
     <link rel="next" title="Example" href="example.html" />
     <link rel="prev" title="Quick Start" href="quickstart.html" />
    
@@ -719,21 +719,6 @@ default to &#8216;current&#8217;.</td>
 </dd></dl>
 
 <dl class="method">
-<dt id="macaca.webdriver.WebDriver.keys">
-<code class="descname">keys</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.keys" title="Permalink to this definition">¶</a></dt>
-<dd><p>Send a sequence of key strokes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> (<em>str|int|list</em>) &#8211; value can be a string,
-int or a list contains defined Keys.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
 <dt id="macaca.webdriver.WebDriver.maximize_window">
 <code class="descname">maximize_window</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.maximize_window"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.maximize_window" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximizes the current window.</p>
@@ -822,6 +807,21 @@ failed to save the image.</li>
 <li><code class="xref py py-exc docutils literal"><span class="pre">IOError.</span></code></li>
 </ul>
 </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="macaca.webdriver.WebDriver.send_keys">
+<code class="descname">send_keys</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.send_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.send_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send a sequence of key strokes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> (<em>str|int|list</em>) &#8211; value can be a string,
+int or a list contains defined Keys.</td>
 </tr>
 </tbody>
 </table>
@@ -943,6 +943,30 @@ default to &#8216;current&#8217;.</li>
 </dd></dl>
 
 <dl class="method">
+<dt id="macaca.webdriver.WebDriver.swipe">
+<code class="descname">swipe</code><span class="sig-paren">(</span><em>startX</em>, <em>startY</em>, <em>endX</em>, <em>endY</em>, <em>duration=1000</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.swipe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.swipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Swipe on the touch screen using finger motion events.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>startX</strong> (<em>Float</em>) &#8211; The x-coordinate of start point.</li>
+<li><strong>startY</strong> (<em>Float</em>) &#8211; The y-coordinate of start point.</li>
+<li><strong>endX</strong> (<em>Float</em>) &#8211; The x-coordinate of end point.</li>
+<li><strong>endY</strong> (<em>Float</em>) &#8211; The y-coordinate of end point.</li>
+<li><strong>duration</strong> (<em>Float</em>) &#8211; The duration in ms.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">WebDriver object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="macaca.webdriver.WebDriver.switch_to_frame">
 <code class="descname">switch_to_frame</code><span class="sig-paren">(</span><em>frame_reference=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.switch_to_frame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.switch_to_frame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Switches focus to the specified frame, by index, name, or webelement.</p>
@@ -1004,7 +1028,7 @@ Otherwise throw an error.</td>
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.tap">
 <code class="descname">tap</code><span class="sig-paren">(</span><em>element</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.tap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.tap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Single tap on the touch enabled device..</p>
+<dd><p>Single tap on the touch enabled device.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1025,7 +1049,7 @@ Otherwise throw an error.</td>
 
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.wait_for">
-<code class="descname">wait_for</code><span class="sig-paren">(</span><em>timeout=10000</em>, <em>interval=1000</em>, <em>*</em>, <em>asserter=&lt;function WebDriver.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.wait_for"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.wait_for" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for</code><span class="sig-paren">(</span><em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function WebDriver.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.wait_for"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.wait_for" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for driver till satisfy the given condition</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1050,7 +1074,7 @@ Otherwise throw an error.</td>
 
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.wait_for_element">
-<code class="descname">wait_for_element</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>*</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.wait_for_element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.wait_for_element" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_element</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.wait_for_element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.wait_for_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for element till satisfy the given condition</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1133,7 +1157,7 @@ See more in &#8216;wait_for_element&#8217; method.</p>
 
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.wait_for_elements">
-<code class="descname">wait_for_elements</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>*</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.wait_for_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.wait_for_elements" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_elements</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.wait_for_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.wait_for_elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for elements till satisfy the given condition</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1636,8 +1660,8 @@ See more in &#8216;elements&#8217; method.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>property_name</strong> (<em>str</em>) &#8211; CSS property.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The computed value of parameter property name
-from element’s style declarations if the current
-browsing context’s document type is not &#8220;xml&#8221;,
+from element&#8217;s style declarations if the current
+browsing context&#8217;s document type is not &#8220;xml&#8221;,
 else let it be &#8220;&#8221;</td>
 </tr>
 </tbody>
@@ -1728,8 +1752,8 @@ top-left corner of the element.</li>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">x(float): X axis position of the top-left corner.
 y(float): Y axis position of the top-left corner.
-height(float): Height of the web element’s bounding rectangle.
-width(float): Width of the web element’s bounding rectangle.</td>
+height(float): Height of the web element&#8217;s bounding rectangle.
+width(float): Width of the web element&#8217;s bounding rectangle.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">A dict contains</td>
 </tr>
@@ -1788,10 +1812,34 @@ int or a list contains defined Keys.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">height(float): Height of the web element’s bounding rectangle.
-width(float): Width of the web element’s bounding rectangle.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">height(float): Height of the web element&#8217;s bounding rectangle.
+width(float): Width of the web element&#8217;s bounding rectangle.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">A dict contains</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="macaca.webelement.WebElement.swipe">
+<code class="descname">swipe</code><span class="sig-paren">(</span><em>startX</em>, <em>startY</em>, <em>endX</em>, <em>endY</em>, <em>duration=1000</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.swipe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.swipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Swipe on the touch screen using finger motion events.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>startX</strong> (<em>Float</em>) &#8211; The x-coordinate of start point.</li>
+<li><strong>startY</strong> (<em>Float</em>) &#8211; The y-coordinate of start point.</li>
+<li><strong>endX</strong> (<em>Float</em>) &#8211; The x-coordinate of end point.</li>
+<li><strong>endY</strong> (<em>Float</em>) &#8211; The y-coordinate of end point.</li>
+<li><strong>duration</strong> (<em>Float</em>) &#8211; The duration in ms.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">WebElement object.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1845,7 +1893,7 @@ This is equivalent to calling element.innerText.</p>
 
 <dl class="method">
 <dt id="macaca.webelement.WebElement.wait_for">
-<code class="descname">wait_for</code><span class="sig-paren">(</span><em>timeout=10000</em>, <em>interval=1000</em>, <em>*</em>, <em>asserter=&lt;function WebElement.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.wait_for"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.wait_for" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for</code><span class="sig-paren">(</span><em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function WebElement.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.wait_for"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.wait_for" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for element till given condition</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1870,7 +1918,7 @@ This is equivalent to calling element.innerText.</p>
 
 <dl class="method">
 <dt id="macaca.webelement.WebElement.wait_for_element">
-<code class="descname">wait_for_element</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>*</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.wait_for_element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.wait_for_element" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_element</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.wait_for_element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.wait_for_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for element till the given condition</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1953,7 +2001,7 @@ See more in &#8216;wait_for_element&#8217; method.</p>
 
 <dl class="method">
 <dt id="macaca.webelement.WebElement.wait_for_elements">
-<code class="descname">wait_for_elements</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>*</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.wait_for_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.wait_for_elements" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_elements</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.wait_for_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.wait_for_elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for elements till the given condition</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
