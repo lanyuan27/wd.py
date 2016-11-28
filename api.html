@@ -81,12 +81,20 @@ request.</p>
 <dt id="macaca.webdriver.WebDriver.accept_alert">
 <code class="descname">accept_alert</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.accept_alert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.accept_alert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Accepts the alert available.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>iOS</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.add_cookie">
 <code class="descname">add_cookie</code><span class="sig-paren">(</span><em>cookie_dict</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.add_cookie"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.add_cookie" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set a cookie.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -104,6 +112,10 @@ request.</p>
 <dt id="macaca.webdriver.WebDriver.alert_keys">
 <code class="descname">alert_keys</code><span class="sig-paren">(</span><em>keys</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.alert_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.alert_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sends keystrokes to a JavaScript prompt() dialog.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>iOS</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -118,12 +130,20 @@ request.</p>
 <dt id="macaca.webdriver.WebDriver.alert_text">
 <code class="descname">alert_text</code><a class="headerlink" href="#macaca.webdriver.WebDriver.alert_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the text of the Alert.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>iOS</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.attach">
 <code class="descname">attach</code><span class="sig-paren">(</span><em>session_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.attach"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.attach" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attach to given Session.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -140,6 +160,10 @@ request.</p>
 <dt id="macaca.webdriver.WebDriver.back">
 <code class="descname">back</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.back" title="Permalink to this definition">¶</a></dt>
 <dd><p>Back.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -154,6 +178,10 @@ request.</p>
 <dt id="macaca.webdriver.WebDriver.close">
 <code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Closes the current window.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -168,24 +196,40 @@ request.</p>
 <dt id="macaca.webdriver.WebDriver.context">
 <code class="descname">context</code><a class="headerlink" href="#macaca.webdriver.WebDriver.context" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the current context (Native or WebView).</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.webdriver.WebDriver.contexts">
 <code class="descname">contexts</code><a class="headerlink" href="#macaca.webdriver.WebDriver.contexts" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a list of available contexts</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.webdriver.WebDriver.cookies">
 <code class="descname">cookies</code><a class="headerlink" href="#macaca.webdriver.WebDriver.cookies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns  all cookies associated with the address of the current context.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.webdriver.WebDriver.current_url">
 <code class="descname">current_url</code><a class="headerlink" href="#macaca.webdriver.WebDriver.current_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the URL of the current page.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -200,18 +244,30 @@ request.</p>
 <dt id="macaca.webdriver.WebDriver.current_window_handle">
 <code class="descname">current_window_handle</code><a class="headerlink" href="#macaca.webdriver.WebDriver.current_window_handle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the handle of the current window.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.delete_all_cookies">
 <code class="descname">delete_all_cookies</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.delete_all_cookies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.delete_all_cookies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete all cookies at once.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.delete_cookie">
 <code class="descname">delete_cookie</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.delete_cookie"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.delete_cookie" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a single cookie by name.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -226,12 +282,20 @@ request.</p>
 <dt id="macaca.webdriver.WebDriver.dismiss_alert">
 <code class="descname">dismiss_alert</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.dismiss_alert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.dismiss_alert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dismisses the alert available.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>iOS</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.element">
 <code class="descname">element</code><span class="sig-paren">(</span><em>using</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find an element in the current context.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -424,6 +488,10 @@ See more in &#8216;element_or_none&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.element_if_exists">
 <code class="descname">element_if_exists</code><span class="sig-paren">(</span><em>using</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.element_if_exists"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.element_if_exists" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if an element in the current context.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -448,6 +516,10 @@ See more in &#8216;element_or_none&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.element_or_none">
 <code class="descname">element_or_none</code><span class="sig-paren">(</span><em>using</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.element_or_none"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.element_or_none" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if an element in the current context.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -472,6 +544,10 @@ See more in &#8216;element_or_none&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.elements">
 <code class="descname">elements</code><span class="sig-paren">(</span><em>using</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find elements in the current context.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -552,6 +628,10 @@ See more in &#8216;elements&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.execute_async_script">
 <code class="descname">execute_async_script</code><span class="sig-paren">(</span><em>script</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.execute_async_script"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.execute_async_script" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute JavaScript Asynchronously in current context.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -573,6 +653,10 @@ See more in &#8216;elements&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.execute_script">
 <code class="descname">execute_script</code><span class="sig-paren">(</span><em>script</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.execute_script"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.execute_script" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute JavaScript Synchronously in current context.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -596,6 +680,8 @@ See more in &#8216;elements&#8217; method.</p>
 <dd><dl class="docutils">
 <dt>Flick on the touch screen using finger motion events.</dt>
 <dd>This flickcommand starts at a particulat screen location.</dd>
+<dt>Support:</dt>
+<dd>iOS</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -620,6 +706,10 @@ See more in &#8216;elements&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.forward">
 <code class="descname">forward</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.forward" title="Permalink to this definition">¶</a></dt>
 <dd><p>Forward.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -634,6 +724,10 @@ See more in &#8216;elements&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads a web page in the current browser session.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -652,12 +746,20 @@ See more in &#8216;elements&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.get_active_element">
 <code class="descname">get_active_element</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.get_active_element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.get_active_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the active element in current context.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.get_cookie">
 <code class="descname">get_cookie</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.get_cookie"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.get_cookie" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a single cookie by name.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -672,6 +774,10 @@ See more in &#8216;elements&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.get_window_position">
 <code class="descname">get_window_position</code><span class="sig-paren">(</span><em>window_handle='current'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.get_window_position"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.get_window_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the x,y position of the current window.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -691,6 +797,10 @@ default to &#8216;current&#8217;.</td>
 <dt id="macaca.webdriver.WebDriver.get_window_size">
 <code class="descname">get_window_size</code><span class="sig-paren">(</span><em>window_handle='current'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.get_window_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.get_window_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the width and height of the current window.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -708,6 +818,10 @@ default to &#8216;current&#8217;.</td>
 <dt id="macaca.webdriver.WebDriver.init">
 <code class="descname">init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.init" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create Session by desiredCapabilities</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -722,6 +836,10 @@ default to &#8216;current&#8217;.</td>
 <dt id="macaca.webdriver.WebDriver.maximize_window">
 <code class="descname">maximize_window</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.maximize_window"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.maximize_window" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximizes the current window.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -736,6 +854,10 @@ default to &#8216;current&#8217;.</td>
 <dt id="macaca.webdriver.WebDriver.move_to">
 <code class="descname">move_to</code><span class="sig-paren">(</span><em>element</em>, <em>x=0</em>, <em>y=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.move_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.move_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Move the mouse by an offset of the specificed element.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -760,6 +882,10 @@ top-left corner of the element.</li>
 <dt id="macaca.webdriver.WebDriver.quit">
 <code class="descname">quit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.quit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.quit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Quit the driver.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -774,6 +900,10 @@ top-left corner of the element.</li>
 <dt id="macaca.webdriver.WebDriver.refresh">
 <code class="descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.refresh"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.refresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Refresh.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -788,6 +918,10 @@ top-left corner of the element.</li>
 <dt id="macaca.webdriver.WebDriver.save_screenshot">
 <code class="descname">save_screenshot</code><span class="sig-paren">(</span><em>filename</em>, <em>quietly=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.save_screenshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.save_screenshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save the screenshot to local.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -816,6 +950,10 @@ failed to save the image.</li>
 <dt id="macaca.webdriver.WebDriver.send_keys">
 <code class="descname">send_keys</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.send_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.send_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send a sequence of key strokes.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -834,6 +972,8 @@ int or a list contains defined Keys.</td>
 <dt>Implicit wait timeout that specifies a time to</dt>
 <dd>wait for the implicit element location strategy
 hen locating elements using Find Element and Find Elements.</dd>
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -853,6 +993,8 @@ hen locating elements using Find Element and Find Elements.</dd>
 <dd><dl class="docutils">
 <dt>Page load timeout that specifies a time to</dt>
 <dd>wait for the page loading to complete.</dd>
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -870,6 +1012,10 @@ hen locating elements using Find Element and Find Elements.</dd>
 <dt id="macaca.webdriver.WebDriver.set_script_timeout">
 <code class="descname">set_script_timeout</code><span class="sig-paren">(</span><em>time_to_wait</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.set_script_timeout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.set_script_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Script timeout that specifies a time to wait for scripts to run.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -886,6 +1032,10 @@ hen locating elements using Find Element and Find Elements.</dd>
 <dt id="macaca.webdriver.WebDriver.set_window_position">
 <code class="descname">set_window_position</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>window_handle='current'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.set_window_position"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.set_window_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the x,y position of the current window.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -909,6 +1059,10 @@ default to &#8216;current&#8217;.</li>
 <dt id="macaca.webdriver.WebDriver.set_window_size">
 <code class="descname">set_window_size</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>window_handle='current'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.set_window_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.set_window_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the width and height of the current window.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -932,6 +1086,10 @@ default to &#8216;current&#8217;.</li>
 <dt id="macaca.webdriver.WebDriver.source">
 <code class="descname">source</code><a class="headerlink" href="#macaca.webdriver.WebDriver.source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the source of the current page.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -946,6 +1104,10 @@ default to &#8216;current&#8217;.</li>
 <dt id="macaca.webdriver.WebDriver.swipe">
 <code class="descname">swipe</code><span class="sig-paren">(</span><em>startX</em>, <em>startY</em>, <em>endX</em>, <em>endY</em>, <em>duration=1000</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.swipe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.swipe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Swipe on the touch screen using finger motion events.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -970,6 +1132,10 @@ default to &#8216;current&#8217;.</li>
 <dt id="macaca.webdriver.WebDriver.switch_to_frame">
 <code class="descname">switch_to_frame</code><span class="sig-paren">(</span><em>frame_reference=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.switch_to_frame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.switch_to_frame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Switches focus to the specified frame, by index, name, or webelement.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -990,12 +1156,20 @@ Otherwise throw an error.</td>
 <dt id="macaca.webdriver.WebDriver.switch_to_parent_frame">
 <code class="descname">switch_to_parent_frame</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.switch_to_parent_frame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.switch_to_parent_frame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Switches focus to the parent context.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.switch_to_window">
 <code class="descname">switch_to_window</code><span class="sig-paren">(</span><em>window_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.switch_to_window"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.switch_to_window" title="Permalink to this definition">¶</a></dt>
 <dd><p>Switch to the given window.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1014,6 +1188,8 @@ Otherwise throw an error.</td>
 <dd><dl class="docutils">
 <dt>Gets the screenshot of the current window</dt>
 <dd>as a base64 encoded string.</dd>
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1029,6 +1205,10 @@ Otherwise throw an error.</td>
 <dt id="macaca.webdriver.WebDriver.tap">
 <code class="descname">tap</code><span class="sig-paren">(</span><em>element</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.tap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.tap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Single tap on the touch enabled device.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1045,12 +1225,20 @@ Otherwise throw an error.</td>
 <dt id="macaca.webdriver.WebDriver.title">
 <code class="descname">title</code><a class="headerlink" href="#macaca.webdriver.WebDriver.title" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current page title.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.wait_for">
 <code class="descname">wait_for</code><span class="sig-paren">(</span><em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function WebDriver.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.wait_for"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.wait_for" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for driver till satisfy the given condition</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1076,6 +1264,10 @@ Otherwise throw an error.</td>
 <dt id="macaca.webdriver.WebDriver.wait_for_element">
 <code class="descname">wait_for_element</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.wait_for_element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.wait_for_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for element till satisfy the given condition</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1159,6 +1351,10 @@ See more in &#8216;wait_for_element&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.wait_for_elements">
 <code class="descname">wait_for_elements</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.wait_for_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.wait_for_elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for elements till satisfy the given condition</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1242,6 +1438,10 @@ See more in &#8216;wait_for_elements&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.window_handles">
 <code class="descname">window_handles</code><a class="headerlink" href="#macaca.webdriver.WebDriver.window_handles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the handles of all windows within the current session.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -1263,20 +1463,28 @@ See more in &#8216;wait_for_elements&#8217; method.</p>
 <dl class="method">
 <dt id="macaca.webelement.WebElement.clear">
 <code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.clear" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Element Clear command scrolls into view
-a submittable element excluding buttons or
+<dd><dl class="docutils">
+<dt>The Element Clear command scrolls into view</dt>
+<dd>a submittable element excluding buttons or
 editable element, and then attempts to clear
-its value, checkedness, or text content.</p>
+its value, checkedness, or text content.</dd>
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webelement.WebElement.click">
 <code class="descname">click</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.click"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.click" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Element Click command scrolls into view
-the element and then attempts to click the
+<dd><dl class="docutils">
+<dt>The Element Click command scrolls into view</dt>
+<dd>the element and then attempts to click the
 centre of the visible area of the first element
 of the DOMRect sequence. In case the element is
-not displayed, an element not visible error is returned.</p>
+not displayed, an element not visible error is returned.</dd>
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
@@ -1289,6 +1497,10 @@ not displayed, an element not visible error is returned.</p>
 <dt id="macaca.webelement.WebElement.element">
 <code class="descname">element</code><span class="sig-paren">(</span><em>using</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.element" title="Permalink to this definition">¶</a></dt>
 <dd><p>find an element in the current element.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1481,6 +1693,10 @@ See more in &#8216;element_or_none&#8217; method.</p>
 <dt id="macaca.webelement.WebElement.element_if_exists">
 <code class="descname">element_if_exists</code><span class="sig-paren">(</span><em>using</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.element_if_exists"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.element_if_exists" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if an element in the current element.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1505,6 +1721,10 @@ See more in &#8216;element_or_none&#8217; method.</p>
 <dt id="macaca.webelement.WebElement.element_or_none">
 <code class="descname">element_or_none</code><span class="sig-paren">(</span><em>using</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.element_or_none"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.element_or_none" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if an element in the current element.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1529,6 +1749,10 @@ See more in &#8216;element_or_none&#8217; method.</p>
 <dt id="macaca.webelement.WebElement.elements">
 <code class="descname">elements</code><span class="sig-paren">(</span><em>using</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>find elements in the current element.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1611,6 +1835,8 @@ See more in &#8216;elements&#8217; method.</p>
 <dd><dl class="docutils">
 <dt>Flick on the touch screen using finger motion events.</dt>
 <dd>This flickcommand starts at a particulat screen location.</dd>
+<dt>Support:</dt>
+<dd>iOS</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1636,6 +1862,8 @@ See more in &#8216;elements&#8217; method.</p>
 <dd><dl class="docutils">
 <dt>The computed value of the given CSS property</dt>
 <dd>of the given web element.</dd>
+<dt>Support:</dt>
+<dd>Support: Web(WebView)</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1656,6 +1884,10 @@ else let it be &#8220;&#8221;</td>
 <dt id="macaca.webelement.WebElement.get_property">
 <code class="descname">get_property</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.get_property"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.get_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the result of getting a property, Support: Android iOS Web(WebView).</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Support: Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1672,24 +1904,40 @@ else let it be &#8220;&#8221;</td>
 <dt id="macaca.webelement.WebElement.is_displayed">
 <code class="descname">is_displayed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.is_displayed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.is_displayed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the element is visible.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webelement.WebElement.is_enabled">
 <code class="descname">is_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.is_enabled"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.is_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns whether the element is enabled.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webelement.WebElement.is_selected">
 <code class="descname">is_selected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.is_selected"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.is_selected" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns whether the element is selected.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.webelement.WebElement.location">
 <code class="descname">location</code><a class="headerlink" href="#macaca.webelement.WebElement.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The location of the element in the renderable canvas in pixels.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1707,6 +1955,10 @@ y(float): Y axis position of the top-left corner.</td>
 <dt id="macaca.webelement.WebElement.move_to">
 <code class="descname">move_to</code><span class="sig-paren">(</span><em>x=0</em>, <em>y=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.move_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.move_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Move the mouse by an offset of the specificed element.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1730,6 +1982,10 @@ top-left corner of the element.</li>
 <dt id="macaca.webelement.WebElement.rect">
 <code class="descname">rect</code><a class="headerlink" href="#macaca.webelement.WebElement.rect" title="Permalink to this definition">¶</a></dt>
 <dd><p>The dimensions and coordinates of the given web element in pixels.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1749,6 +2005,10 @@ width(float): Width of the web element&#8217;s bounding rectangle.</td>
 <dt id="macaca.webelement.WebElement.save_screenshot">
 <code class="descname">save_screenshot</code><span class="sig-paren">(</span><em>filename</em>, <em>quietly=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.save_screenshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.save_screenshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save the screenshot to local.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1777,6 +2037,10 @@ failed to save the image.</li>
 <dt id="macaca.webelement.WebElement.send_keys">
 <code class="descname">send_keys</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.send_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.send_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send a sequence of key strokes to an element.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1792,6 +2056,10 @@ int or a list contains defined Keys.</td>
 <dt id="macaca.webelement.WebElement.size">
 <code class="descname">size</code><a class="headerlink" href="#macaca.webelement.WebElement.size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of the given web element in pixels.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1809,6 +2077,10 @@ width(float): Width of the web element&#8217;s bounding rectangle.</td>
 <dt id="macaca.webelement.WebElement.swipe">
 <code class="descname">swipe</code><span class="sig-paren">(</span><em>startX</em>, <em>startY</em>, <em>endX</em>, <em>endY</em>, <em>duration=1000</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.swipe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.swipe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Swipe on the touch screen using finger motion events.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1833,6 +2105,10 @@ width(float): Width of the web element&#8217;s bounding rectangle.</td>
 <dt id="macaca.webelement.WebElement.tag_name">
 <code class="descname">tag_name</code><a class="headerlink" href="#macaca.webelement.WebElement.tag_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the tagName of the element.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -1841,6 +2117,8 @@ width(float): Width of the web element&#8217;s bounding rectangle.</td>
 <dd><dl class="docutils">
 <dt>Gets the screenshot of the current element</dt>
 <dd>as a base64 encoded string.</dd>
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1855,7 +2133,11 @@ width(float): Width of the web element&#8217;s bounding rectangle.</td>
 <dl class="method">
 <dt id="macaca.webelement.WebElement.tap">
 <code class="descname">tap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.tap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.tap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Single tap on the touch enabled device..</p>
+<dd><p>Single tap on the touch enabled device.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1871,14 +2153,22 @@ width(float): Width of the web element&#8217;s bounding rectangle.</td>
 <dl class="attribute">
 <dt id="macaca.webelement.WebElement.text">
 <code class="descname">text</code><a class="headerlink" href="#macaca.webelement.WebElement.text" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the text of the element.
-This is equivalent to calling element.innerText.</p>
+<dd><dl class="docutils">
+<dt>Return the text of the element.</dt>
+<dd>This is equivalent to calling element.innerText.</dd>
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="macaca.webelement.WebElement.wait_for">
 <code class="descname">wait_for</code><span class="sig-paren">(</span><em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function WebElement.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.wait_for"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.wait_for" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for element till given condition</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1904,6 +2194,10 @@ This is equivalent to calling element.innerText.</p>
 <dt id="macaca.webelement.WebElement.wait_for_element">
 <code class="descname">wait_for_element</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.wait_for_element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.wait_for_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for element till the given condition</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1987,6 +2281,10 @@ See more in &#8216;wait_for_element&#8217; method.</p>
 <dt id="macaca.webelement.WebElement.wait_for_elements">
 <code class="descname">wait_for_elements</code><span class="sig-paren">(</span><em>using</em>, <em>value</em>, <em>timeout=10000</em>, <em>interval=1000</em>, <em>asserter=&lt;function is_displayed&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.wait_for_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.wait_for_elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for elements till the given condition</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

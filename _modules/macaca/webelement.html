@@ -110,6 +110,9 @@
 <div class="viewcode-block" id="WebElement.element"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.element">[docs]</a>    <span class="k">def</span> <span class="nf">element</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">using</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;find an element in the current element.</span>
 
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            using(str): The element location strategy.</span>
 <span class="sd">            value(str): The value of the location strategy.</span>
@@ -127,6 +130,9 @@
 
 <div class="viewcode-block" id="WebElement.element_if_exists"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.element_if_exists">[docs]</a>    <span class="k">def</span> <span class="nf">element_if_exists</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">using</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Check if an element in the current element.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            using(str): The element location strategy.</span>
@@ -150,6 +156,9 @@
 <div class="viewcode-block" id="WebElement.element_or_none"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.element_or_none">[docs]</a>    <span class="k">def</span> <span class="nf">element_or_none</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">using</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Check if an element in the current element.</span>
 
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            using(str): The element location strategy.</span>
 <span class="sd">            value(str): The value of the location strategy.</span>
@@ -171,6 +180,9 @@
 <div class="viewcode-block" id="WebElement.elements"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.elements">[docs]</a>    <span class="k">def</span> <span class="nf">elements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">using</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;find elements in the current element.</span>
 
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            using(str): The element location strategy.</span>
 <span class="sd">            value(str): The value of the location strategy.</span>
@@ -190,6 +202,9 @@
         <span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
         <span class="n">asserter</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Wait for element till given condition</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            timeout(int): How long we should be retrying stuff.</span>
@@ -219,6 +234,9 @@
         <span class="bp">self</span><span class="p">,</span> <span class="n">using</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
         <span class="n">interval</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">asserter</span><span class="o">=</span><span class="n">is_displayed</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Wait for element till the given condition</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            using(str): The element location strategy.</span>
@@ -252,6 +270,9 @@
         <span class="n">interval</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">asserter</span><span class="o">=</span><span class="n">is_displayed</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Wait for elements till the given condition</span>
 
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            using(str): The element location strategy.</span>
 <span class="sd">            value(str): The value of the location strategy.</span>
@@ -284,19 +305,34 @@
         <span class="k">return</span> <span class="n">_wait_for_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">using</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="WebElement.is_displayed"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.is_displayed">[docs]</a>    <span class="k">def</span> <span class="nf">is_displayed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Whether the element is visible.&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Whether the element is visible.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android Web(WebView)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">IS_ELEMENT_DISPLAYED</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="WebElement.is_selected"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.is_selected">[docs]</a>    <span class="k">def</span> <span class="nf">is_selected</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns whether the element is selected.&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Returns whether the element is selected.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Web(WebView)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">IS_ELEMENT_SELECTED</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="WebElement.is_enabled"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.is_enabled">[docs]</a>    <span class="k">def</span> <span class="nf">is_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns whether the element is enabled.&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Returns whether the element is enabled.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Web(WebView)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">IS_ELEMENT_ENABLED</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="WebElement.get_property"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.get_property">[docs]</a>    <span class="k">def</span> <span class="nf">get_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return the result of getting a property, Support: Android iOS Web(WebView).</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Support: Android iOS Web(WebView)</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            name(str): Name of the property to retrieve, Android iOS can only get `origin` `size`.</span>
@@ -309,6 +345,9 @@
 <div class="viewcode-block" id="WebElement.get_computed_css"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.get_computed_css">[docs]</a>    <span class="k">def</span> <span class="nf">get_computed_css</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">property_name</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;The computed value of the given CSS property</span>
 <span class="sd">           of the given web element.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Support: Web(WebView)</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            property_name(str): CSS property.</span>
@@ -326,17 +365,27 @@
     <span class="k">def</span> <span class="nf">text</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return the text of the element.</span>
 <span class="sd">           This is equivalent to calling element.innerText.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">GET_ELEMENT_TEXT</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">tag_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return the tagName of the element.&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Return the tagName of the element.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Web(WebView)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">GET_ELEMENT_TAG_NAME</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">location</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;The location of the element in the renderable canvas in pixels.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Web(WebView)</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            A dict contains:</span>
@@ -348,6 +397,9 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">rect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;The dimensions and coordinates of the given web element in pixels.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Web(WebView)</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            A dict contains:</span>
@@ -361,6 +413,9 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;The size of the given web element in pixels.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Web(WebView)</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            A dict contains:</span>
@@ -376,6 +431,9 @@
 <span class="sd">           centre of the visible area of the first element</span>
 <span class="sd">           of the DOMRect sequence. In case the element is</span>
 <span class="sd">           not displayed, an element not visible error is returned.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">CLICK_ELEMENT</span><span class="p">)</span></div>
 
@@ -385,12 +443,18 @@
 <span class="sd">           a submittable element excluding buttons or</span>
 <span class="sd">           editable element, and then attempts to clear</span>
 <span class="sd">           its value, checkedness, or text content.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">CLEAR_ELEMENT</span><span class="p">)</span></div>
 
     <span class="nd">@fluent</span>
 <div class="viewcode-block" id="WebElement.send_keys"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.send_keys">[docs]</a>    <span class="k">def</span> <span class="nf">send_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Send a sequence of key strokes to an element.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            value(str|int|list): value can be a string,</span>
@@ -402,6 +466,9 @@
     <span class="nd">@fluent</span>
 <div class="viewcode-block" id="WebElement.move_to"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.move_to">[docs]</a>    <span class="k">def</span> <span class="nf">move_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Move the mouse by an offset of the specificed element.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            x(float): X offset to move to, relative to the</span>
@@ -419,6 +486,9 @@
         <span class="sd">&quot;&quot;&quot;Flick on the touch screen using finger motion events.</span>
 <span class="sd">           This flickcommand starts at a particulat screen location.</span>
 
+<span class="sd">        Support:</span>
+<span class="sd">            iOS</span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            x(float}: The x offset in pixels to flick by.</span>
 <span class="sd">            y(float): The y offset in pixels to flick by.</span>
@@ -431,7 +501,10 @@
 
     <span class="nd">@fluent</span>
 <div class="viewcode-block" id="WebElement.tap"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.tap">[docs]</a>    <span class="k">def</span> <span class="nf">tap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Single tap on the touch enabled device..</span>
+        <span class="sd">&quot;&quot;&quot;Single tap on the touch enabled device.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            element(WebElement): WebElement Object to single tap on.</span>
@@ -444,6 +517,9 @@
     <span class="nd">@fluent</span>
 <div class="viewcode-block" id="WebElement.swipe"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.swipe">[docs]</a>    <span class="k">def</span> <span class="nf">swipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">startX</span><span class="p">,</span> <span class="n">startY</span><span class="p">,</span> <span class="n">endX</span><span class="p">,</span> <span class="n">endY</span><span class="p">,</span> <span class="n">duration</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Swipe on the touch screen using finger motion events.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            startX(Float): The x-coordinate of start point.</span>
@@ -467,6 +543,9 @@
         <span class="sd">&quot;&quot;&quot;Gets the screenshot of the current element</span>
 <span class="sd">           as a base64 encoded string.</span>
 
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
+
 <span class="sd">        Returns:</span>
 <span class="sd">            Base64 encoded string of the screenshot.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -475,6 +554,9 @@
     <span class="nd">@fluent</span>
 <div class="viewcode-block" id="WebElement.save_screenshot"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.save_screenshot">[docs]</a>    <span class="k">def</span> <span class="nf">save_screenshot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Save the screenshot to local.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS Web(WebView)</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            filename(str): The path to save the image.</span>
