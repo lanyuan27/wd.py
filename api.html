@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>API &mdash; wd.py 0.1.4 documentation</title>
+    <title>API &mdash; wd.py 0.1.5 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.1.4',
+        VERSION:     '0.1.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="wd.py 0.1.4 documentation" href="index.html" />
+    <link rel="top" title="wd.py 0.1.5 documentation" href="index.html" />
     <link rel="next" title="Example" href="example.html" />
     <link rel="prev" title="Quick Start" href="quickstart.html" />
    
@@ -965,6 +965,24 @@ int or a list contains defined Keys.</td>
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="macaca.webdriver.WebDriver.sessions">
+<code class="descname">sessions</code><a class="headerlink" href="#macaca.webdriver.WebDriver.sessions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all the sessions of the webdriver server.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS Web(WebView)</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Return the URL of the current page.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.set_implicitly_wait">
 <code class="descname">set_implicitly_wait</code><span class="sig-paren">(</span><em>time_to_wait</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.set_implicitly_wait"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.set_implicitly_wait" title="Permalink to this definition">¶</a></dt>
@@ -1229,6 +1247,34 @@ Otherwise throw an error.</td>
 <dt>Support:</dt>
 <dd>Web(WebView)</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="macaca.webdriver.WebDriver.touch">
+<code class="descname">touch</code><span class="sig-paren">(</span><em>name</em>, <em>args=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.touch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.touch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply touch actions on devices. Such as, tap/doubleTap/press/pinch/rotate/drag.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>str</em>) &#8211; Name of the action</li>
+<li><strong>args</strong> (<em>dict</em>) &#8211; Arguments of the action</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">WebDriver Object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><code class="xref py py-exc docutils literal"><span class="pre">WebDriverException.</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -2159,6 +2205,34 @@ width(float): Width of the web element&#8217;s bounding rectangle.</td>
 <dt>Support:</dt>
 <dd>Android iOS Web(WebView)</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="macaca.webelement.WebElement.touch">
+<code class="descname">touch</code><span class="sig-paren">(</span><em>name</em>, <em>args=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.touch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.touch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply touch actions on devices. Such as, tap/doubleTap/press/pinch/rotate/drag.</p>
+<dl class="docutils">
+<dt>Support:</dt>
+<dd>Android iOS</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>str</em>) &#8211; Name of the action</li>
+<li><strong>args</strong> (<em>dict</em>) &#8211; Arguments of the action</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">WebDriver Object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><code class="xref py py-exc docutils literal"><span class="pre">WebDriverException.</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">

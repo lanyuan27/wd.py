@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>macaca.webelement &mdash; wd.py 0.1.4 documentation</title>
+    <title>macaca.webelement &mdash; wd.py 0.1.5 documentation</title>
     
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.1.4',
+        VERSION:     '0.1.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="wd.py 0.1.4 documentation" href="../../index.html" />
+    <link rel="top" title="wd.py 0.1.5 documentation" href="../../index.html" />
     <link rel="up" title="Module code" href="../index.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
@@ -576,7 +576,40 @@
                 <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b64decode</span><span class="p">(</span><span class="n">imgData</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)))</span>
         <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">quietly</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="n">err</span></div></div>
+                <span class="k">raise</span> <span class="n">err</span></div>
+
+    <span class="nd">@fluent</span>
+<div class="viewcode-block" id="WebElement.touch"><a class="viewcode-back" href="../../api.html#macaca.webelement.WebElement.touch">[docs]</a>    <span class="k">def</span> <span class="nf">touch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Apply touch actions on devices. Such as, tap/doubleTap/press/pinch/rotate/drag.</span>
+
+<span class="sd">        Support:</span>
+<span class="sd">            Android iOS</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name(str): Name of the action</span>
+<span class="sd">            args(dict): Arguments of the action</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            WebDriver Object.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            WebDriverException.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
+                <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;element&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">element_id</span>
+            <span class="n">actions</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="p">:</span>
+                <span class="n">args</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">args</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+            <span class="n">args</span><span class="p">[</span><span class="s1">&#39;element&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">element_id</span>
+            <span class="n">actions</span> <span class="o">=</span> <span class="p">[</span><span class="n">args</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Invalid parameters.&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="o">.</span><span class="n">_execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">PERFORM_ACTIONS</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s1">&#39;actions&#39;</span><span class="p">:</span> <span class="n">actions</span>
+        <span class="p">})</span></div></div>
 
 
 <span class="n">add_element_extension_method</span><span class="p">(</span><span class="n">WebElement</span><span class="p">)</span>
