@@ -678,8 +678,9 @@ See more in &#8216;elements&#8217; method.</p>
 <dt id="macaca.webdriver.WebDriver.flick">
 <code class="descname">flick</code><span class="sig-paren">(</span><em>element</em>, <em>x</em>, <em>y</em>, <em>speed</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.flick"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.flick" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
-<dt>Flick on the touch screen using finger motion events.</dt>
-<dd>This flickcommand starts at a particulat screen location.</dd>
+<dt>Deprecated use touch(&#8216;drag&#8217;, { fromX, fromY, toX, toY, duration(s) }) instead.</dt>
+<dd>Flick on the touch screen using finger motion events.
+This flickcommand starts at a particulat screen location.</dd>
 <dt>Support:</dt>
 <dd>iOS</dd>
 </dl>
@@ -853,8 +854,9 @@ default to &#8216;current&#8217;.</td>
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.move_to">
 <code class="descname">move_to</code><span class="sig-paren">(</span><em>element</em>, <em>x=0</em>, <em>y=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.move_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.move_to" title="Permalink to this definition">¶</a></dt>
-<dd><p>Move the mouse by an offset of the specificed element.</p>
-<dl class="docutils">
+<dd><dl class="docutils">
+<dt>Deprecated use element.touch(&#8216;drag&#8217;, { toX, toY, duration(s) }) instead.</dt>
+<dd>Move the mouse by an offset of the specificed element.</dd>
 <dt>Support:</dt>
 <dd>Android</dd>
 </dl>
@@ -1121,8 +1123,9 @@ default to &#8216;current&#8217;.</li>
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.swipe">
 <code class="descname">swipe</code><span class="sig-paren">(</span><em>startX</em>, <em>startY</em>, <em>endX</em>, <em>endY</em>, <em>duration=1000</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.swipe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.swipe" title="Permalink to this definition">¶</a></dt>
-<dd><p>Swipe on the touch screen using finger motion events.</p>
-<dl class="docutils">
+<dd><dl class="docutils">
+<dt>Deprecated use touch(&#8216;drag&#8217;, { fromX, fromY, toX, toY, duration(s) }) instead.</dt>
+<dd>Swipe on the touch screen using finger motion events.</dd>
 <dt>Support:</dt>
 <dd>Android iOS</dd>
 </dl>
@@ -1222,8 +1225,9 @@ Otherwise throw an error.</td>
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.tap">
 <code class="descname">tap</code><span class="sig-paren">(</span><em>element</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.tap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.tap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Single tap on the touch enabled device.</p>
-<dl class="docutils">
+<dd><dl class="docutils">
+<dt>Deprecated use element.touch(&#8216;tap&#8217;) instead.</dt>
+<dd>Single tap on the touch enabled device.</dd>
 <dt>Support:</dt>
 <dd>Android iOS</dd>
 </dl>
@@ -1252,8 +1256,9 @@ Otherwise throw an error.</td>
 <dl class="method">
 <dt id="macaca.webdriver.WebDriver.touch">
 <code class="descname">touch</code><span class="sig-paren">(</span><em>name</em>, <em>args=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webdriver.html#WebDriver.touch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webdriver.WebDriver.touch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Apply touch actions on devices. Such as, tap/doubleTap/press/pinch/rotate/drag.</p>
-<dl class="docutils">
+<dd><dl class="docutils">
+<dt>Apply touch actions on devices. Such as, tap/doubleTap/press/pinch/rotate/drag.</dt>
+<dd>See more on <a class="reference external" href="https://github.com/alibaba/macaca/issues/366">https://github.com/alibaba/macaca/issues/366</a>.</dd>
 <dt>Support:</dt>
 <dd>Android iOS</dd>
 </dl>
@@ -1879,8 +1884,9 @@ See more in &#8216;elements&#8217; method.</p>
 <dt id="macaca.webelement.WebElement.flick">
 <code class="descname">flick</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>speed</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.flick"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.flick" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
-<dt>Flick on the touch screen using finger motion events.</dt>
-<dd>This flickcommand starts at a particulat screen location.</dd>
+<dt>Deprecated use touch(&#8216;drag&#8217;, { fromX, fromY, toX, toY, duration(s) }) instead.</dt>
+<dd>Flick on the touch screen using finger motion events.
+This flickcommand starts at a particulat screen location.</dd>
 <dt>Support:</dt>
 <dd>iOS</dd>
 </dl>
@@ -2000,8 +2006,9 @@ y(float): Y axis position of the top-left corner.</td>
 <dl class="method">
 <dt id="macaca.webelement.WebElement.move_to">
 <code class="descname">move_to</code><span class="sig-paren">(</span><em>x=0</em>, <em>y=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.move_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.move_to" title="Permalink to this definition">¶</a></dt>
-<dd><p>Move the mouse by an offset of the specificed element.</p>
-<dl class="docutils">
+<dd><dl class="docutils">
+<dt>Deprecated use element.touch(&#8216;drag&#8217;, { toX, toY, duration(s) }) instead.</dt>
+<dd>Move the mouse by an offset of the specificed element.</dd>
 <dt>Support:</dt>
 <dd>Android</dd>
 </dl>
@@ -2122,8 +2129,9 @@ width(float): Width of the web element&#8217;s bounding rectangle.</td>
 <dl class="method">
 <dt id="macaca.webelement.WebElement.swipe">
 <code class="descname">swipe</code><span class="sig-paren">(</span><em>startX</em>, <em>startY</em>, <em>endX</em>, <em>endY</em>, <em>duration=1000</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.swipe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.swipe" title="Permalink to this definition">¶</a></dt>
-<dd><p>Swipe on the touch screen using finger motion events.</p>
-<dl class="docutils">
+<dd><dl class="docutils">
+<dt>Deprecated use touch(&#8216;drag&#8217;, { fromX, fromY, toX, toY, duration(s) }) instead.</dt>
+<dd>Swipe on the touch screen using finger motion events.</dd>
 <dt>Support:</dt>
 <dd>Android iOS</dd>
 </dl>
@@ -2179,8 +2187,9 @@ width(float): Width of the web element&#8217;s bounding rectangle.</td>
 <dl class="method">
 <dt id="macaca.webelement.WebElement.tap">
 <code class="descname">tap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.tap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.tap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Single tap on the touch enabled device.</p>
-<dl class="docutils">
+<dd><dl class="docutils">
+<dt>Deprecated use touch(&#8216;tap&#8217;) instead.</dt>
+<dd>Single tap on the touch enabled device.</dd>
 <dt>Support:</dt>
 <dd>Android iOS</dd>
 </dl>
@@ -2210,8 +2219,9 @@ width(float): Width of the web element&#8217;s bounding rectangle.</td>
 <dl class="method">
 <dt id="macaca.webelement.WebElement.touch">
 <code class="descname">touch</code><span class="sig-paren">(</span><em>name</em>, <em>args=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/macaca/webelement.html#WebElement.touch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#macaca.webelement.WebElement.touch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Apply touch actions on devices. Such as, tap/doubleTap/press/pinch/rotate/drag.</p>
-<dl class="docutils">
+<dd><dl class="docutils">
+<dt>Apply touch actions on devices. Such as, tap/doubleTap/press/pinch/rotate/drag.</dt>
+<dd>See more on <a class="reference external" href="https://github.com/alibaba/macaca/issues/366">https://github.com/alibaba/macaca/issues/366</a>.</dd>
 <dt>Support:</dt>
 <dd>Android iOS</dd>
 </dl>
