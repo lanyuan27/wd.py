@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>API &mdash; wd.py 0.1.5 documentation</title>
+    <title>API &#8212; wd.py 0.1.6 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,16 +14,18 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.1.5',
+        VERSION:     '0.1.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="wd.py 0.1.5 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Example" href="example.html" />
     <link rel="prev" title="Quick Start" href="quickstart.html" />
    
@@ -690,7 +692,7 @@ This flickcommand starts at a particulat screen location.</dd>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>element</strong> (<a class="reference internal" href="#macaca.webelement.WebElement" title="macaca.webelement.WebElement"><em>WebElement</em></a>) &#8211; WebElement Object where the flick starts.</li>
-<li><strong>x(float}</strong> &#8211; The x offset in pixels to flick by.</li>
+<li><strong>x</strong><strong>(</strong><strong>float}</strong> &#8211; The x offset in pixels to flick by.</li>
 <li><strong>y</strong> (<em>float</em>) &#8211; The y offset in pixels to flick by.</li>
 <li><strong>speed</strong> (<em>float</em>) &#8211; </li>
 </ul>
@@ -1895,7 +1897,7 @@ This flickcommand starts at a particulat screen location.</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x(float}</strong> &#8211; The x offset in pixels to flick by.</li>
+<li><strong>x</strong><strong>(</strong><strong>float}</strong> &#8211; The x offset in pixels to flick by.</li>
 <li><strong>y</strong> (<em>float</em>) &#8211; The y offset in pixels to flick by.</li>
 <li><strong>speed</strong> (<em>float</em>) &#8211; </li>
 </ul>
@@ -2496,287 +2498,367 @@ See more in &#8216;wait_for_elements&#8217; method.</p>
 are used to represent pressable, non-text keys.</p>
 <dl class="attribute">
 <dt id="macaca.keys.Keys.ADD">
-<code class="descname">ADD</code><em class="property"> = &lt;Keys.ADD: '\ue025'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.ADD" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ADD</code><em class="property"> = '\ue025'</em><a class="headerlink" href="#macaca.keys.Keys.ADD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.ALT">
-<code class="descname">ALT</code><em class="property"> = &lt;Keys.ALT: '\ue00a'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.ALT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ALT</code><em class="property"> = '\ue00a'</em><a class="headerlink" href="#macaca.keys.Keys.ALT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.ARROW_DOWN">
-<code class="descname">ARROW_DOWN</code><em class="property"> = &lt;Keys.ARROW_DOWN: '\ue015'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.ARROW_DOWN" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ARROW_DOWN</code><em class="property"> = '\ue015'</em><a class="headerlink" href="#macaca.keys.Keys.ARROW_DOWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.ARROW_LEFT">
-<code class="descname">ARROW_LEFT</code><em class="property"> = &lt;Keys.ARROW_LEFT: '\ue012'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.ARROW_LEFT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ARROW_LEFT</code><em class="property"> = '\ue012'</em><a class="headerlink" href="#macaca.keys.Keys.ARROW_LEFT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.ARROW_RIGHT">
-<code class="descname">ARROW_RIGHT</code><em class="property"> = &lt;Keys.ARROW_RIGHT: '\ue014'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.ARROW_RIGHT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ARROW_RIGHT</code><em class="property"> = '\ue014'</em><a class="headerlink" href="#macaca.keys.Keys.ARROW_RIGHT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.ARROW_UP">
-<code class="descname">ARROW_UP</code><em class="property"> = &lt;Keys.ARROW_UP: '\ue013'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.ARROW_UP" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ARROW_UP</code><em class="property"> = '\ue013'</em><a class="headerlink" href="#macaca.keys.Keys.ARROW_UP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.BACK">
+<code class="descname">BACK</code><em class="property"> = '\ue106'</em><a class="headerlink" href="#macaca.keys.Keys.BACK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.BACKSPACE">
-<code class="descname">BACKSPACE</code><em class="property"> = &lt;Keys.BACKSPACE: '\ue003'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.BACKSPACE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">BACKSPACE</code><em class="property"> = '\ue003'</em><a class="headerlink" href="#macaca.keys.Keys.BACKSPACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.CALL">
+<code class="descname">CALL</code><em class="property"> = '\ue109'</em><a class="headerlink" href="#macaca.keys.Keys.CALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.CAMERA">
+<code class="descname">CAMERA</code><em class="property"> = '\ue108'</em><a class="headerlink" href="#macaca.keys.Keys.CAMERA" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.CANCEL">
-<code class="descname">CANCEL</code><em class="property"> = &lt;Keys.CANCEL: '\ue001'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.CANCEL" title="Permalink to this definition">¶</a></dt>
+<code class="descname">CANCEL</code><em class="property"> = '\ue001'</em><a class="headerlink" href="#macaca.keys.Keys.CANCEL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.CLEAR">
-<code class="descname">CLEAR</code><em class="property"> = &lt;Keys.CLEAR: '\ue005'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.CLEAR" title="Permalink to this definition">¶</a></dt>
+<code class="descname">CLEAR</code><em class="property"> = '\ue005'</em><a class="headerlink" href="#macaca.keys.Keys.CLEAR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.COMMAND">
-<code class="descname">COMMAND</code><em class="property"> = &lt;Keys.META: '\ue03d'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.COMMAND" title="Permalink to this definition">¶</a></dt>
+<code class="descname">COMMAND</code><em class="property"> = '\ue03d'</em><a class="headerlink" href="#macaca.keys.Keys.COMMAND" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.CONTROL">
-<code class="descname">CONTROL</code><em class="property"> = &lt;Keys.CONTROL: '\ue009'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.CONTROL" title="Permalink to this definition">¶</a></dt>
+<code class="descname">CONTROL</code><em class="property"> = '\ue009'</em><a class="headerlink" href="#macaca.keys.Keys.CONTROL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.DECIMAL">
-<code class="descname">DECIMAL</code><em class="property"> = &lt;Keys.DECIMAL: '\ue028'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.DECIMAL" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DECIMAL</code><em class="property"> = '\ue028'</em><a class="headerlink" href="#macaca.keys.Keys.DECIMAL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.DELETE">
-<code class="descname">DELETE</code><em class="property"> = &lt;Keys.DELETE: '\ue017'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.DELETE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DELETE</code><em class="property"> = '\ue017'</em><a class="headerlink" href="#macaca.keys.Keys.DELETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.DIVIDE">
-<code class="descname">DIVIDE</code><em class="property"> = &lt;Keys.DIVIDE: '\ue029'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.DIVIDE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DIVIDE</code><em class="property"> = '\ue029'</em><a class="headerlink" href="#macaca.keys.Keys.DIVIDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.DPAD_CENTER">
+<code class="descname">DPAD_CENTER</code><em class="property"> = '\ue110'</em><a class="headerlink" href="#macaca.keys.Keys.DPAD_CENTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.DPAD_DOWN">
+<code class="descname">DPAD_DOWN</code><em class="property"> = '\ue10f'</em><a class="headerlink" href="#macaca.keys.Keys.DPAD_DOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.DPAD_LEFT">
+<code class="descname">DPAD_LEFT</code><em class="property"> = '\ue10c'</em><a class="headerlink" href="#macaca.keys.Keys.DPAD_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.DPAD_RIGHT">
+<code class="descname">DPAD_RIGHT</code><em class="property"> = '\ue10e'</em><a class="headerlink" href="#macaca.keys.Keys.DPAD_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.DPAD_UP">
+<code class="descname">DPAD_UP</code><em class="property"> = '\ue10d'</em><a class="headerlink" href="#macaca.keys.Keys.DPAD_UP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.END">
-<code class="descname">END</code><em class="property"> = &lt;Keys.END: '\ue010'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.END" title="Permalink to this definition">¶</a></dt>
+<code class="descname">END</code><em class="property"> = '\ue010'</em><a class="headerlink" href="#macaca.keys.Keys.END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.END_CALL">
+<code class="descname">END_CALL</code><em class="property"> = '\ue10a'</em><a class="headerlink" href="#macaca.keys.Keys.END_CALL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.ENTER">
-<code class="descname">ENTER</code><em class="property"> = &lt;Keys.ENTER: '\ue007'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.ENTER" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ENTER</code><em class="property"> = '\ue007'</em><a class="headerlink" href="#macaca.keys.Keys.ENTER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.EQUALS">
-<code class="descname">EQUALS</code><em class="property"> = &lt;Keys.EQUALS: '\ue019'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.EQUALS" title="Permalink to this definition">¶</a></dt>
+<code class="descname">EQUALS</code><em class="property"> = '\ue019'</em><a class="headerlink" href="#macaca.keys.Keys.EQUALS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.ESCAPE">
-<code class="descname">ESCAPE</code><em class="property"> = &lt;Keys.ESCAPE: '\ue00c'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.ESCAPE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ESCAPE</code><em class="property"> = '\ue00c'</em><a class="headerlink" href="#macaca.keys.Keys.ESCAPE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F1">
-<code class="descname">F1</code><em class="property"> = &lt;Keys.F1: '\ue031'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F1" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F1</code><em class="property"> = '\ue031'</em><a class="headerlink" href="#macaca.keys.Keys.F1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F10">
-<code class="descname">F10</code><em class="property"> = &lt;Keys.F10: '\ue03a'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F10" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F10</code><em class="property"> = '\ue03a'</em><a class="headerlink" href="#macaca.keys.Keys.F10" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F11">
-<code class="descname">F11</code><em class="property"> = &lt;Keys.F11: '\ue03b'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F11" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F11</code><em class="property"> = '\ue03b'</em><a class="headerlink" href="#macaca.keys.Keys.F11" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F12">
-<code class="descname">F12</code><em class="property"> = &lt;Keys.F12: '\ue03c'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F12" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F12</code><em class="property"> = '\ue03c'</em><a class="headerlink" href="#macaca.keys.Keys.F12" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F2">
-<code class="descname">F2</code><em class="property"> = &lt;Keys.F2: '\ue032'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F2</code><em class="property"> = '\ue032'</em><a class="headerlink" href="#macaca.keys.Keys.F2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F3">
-<code class="descname">F3</code><em class="property"> = &lt;Keys.F3: '\ue033'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F3" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F3</code><em class="property"> = '\ue033'</em><a class="headerlink" href="#macaca.keys.Keys.F3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F4">
-<code class="descname">F4</code><em class="property"> = &lt;Keys.F4: '\ue034'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F4" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F4</code><em class="property"> = '\ue034'</em><a class="headerlink" href="#macaca.keys.Keys.F4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F5">
-<code class="descname">F5</code><em class="property"> = &lt;Keys.F5: '\ue035'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F5" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F5</code><em class="property"> = '\ue035'</em><a class="headerlink" href="#macaca.keys.Keys.F5" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F6">
-<code class="descname">F6</code><em class="property"> = &lt;Keys.F6: '\ue036'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F6" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F6</code><em class="property"> = '\ue036'</em><a class="headerlink" href="#macaca.keys.Keys.F6" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F7">
-<code class="descname">F7</code><em class="property"> = &lt;Keys.F7: '\ue037'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F7" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F7</code><em class="property"> = '\ue037'</em><a class="headerlink" href="#macaca.keys.Keys.F7" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F8">
-<code class="descname">F8</code><em class="property"> = &lt;Keys.F8: '\ue038'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F8" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F8</code><em class="property"> = '\ue038'</em><a class="headerlink" href="#macaca.keys.Keys.F8" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.F9">
-<code class="descname">F9</code><em class="property"> = &lt;Keys.F9: '\ue039'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.F9" title="Permalink to this definition">¶</a></dt>
+<code class="descname">F9</code><em class="property"> = '\ue039'</em><a class="headerlink" href="#macaca.keys.Keys.F9" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.HELP">
-<code class="descname">HELP</code><em class="property"> = &lt;Keys.HELP: '\ue002'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.HELP" title="Permalink to this definition">¶</a></dt>
+<code class="descname">HELP</code><em class="property"> = '\ue002'</em><a class="headerlink" href="#macaca.keys.Keys.HELP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.HOME">
-<code class="descname">HOME</code><em class="property"> = &lt;Keys.HOME: '\ue011'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.HOME" title="Permalink to this definition">¶</a></dt>
+<code class="descname">HOME</code><em class="property"> = '\ue011'</em><a class="headerlink" href="#macaca.keys.Keys.HOME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.HOME_SCREEN">
+<code class="descname">HOME_SCREEN</code><em class="property"> = '\ue105'</em><a class="headerlink" href="#macaca.keys.Keys.HOME_SCREEN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.INSERT">
-<code class="descname">INSERT</code><em class="property"> = &lt;Keys.INSERT: '\ue016'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.INSERT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">INSERT</code><em class="property"> = '\ue016'</em><a class="headerlink" href="#macaca.keys.Keys.INSERT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.MENU">
+<code class="descname">MENU</code><em class="property"> = '\ue107'</em><a class="headerlink" href="#macaca.keys.Keys.MENU" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.META">
-<code class="descname">META</code><em class="property"> = &lt;Keys.META: '\ue03d'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.META" title="Permalink to this definition">¶</a></dt>
+<code class="descname">META</code><em class="property"> = '\ue03d'</em><a class="headerlink" href="#macaca.keys.Keys.META" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.MULTIPLY">
-<code class="descname">MULTIPLY</code><em class="property"> = &lt;Keys.MULTIPLY: '\ue024'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.MULTIPLY" title="Permalink to this definition">¶</a></dt>
+<code class="descname">MULTIPLY</code><em class="property"> = '\ue024'</em><a class="headerlink" href="#macaca.keys.Keys.MULTIPLY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.NULL">
-<code class="descname">NULL</code><em class="property"> = &lt;Keys.NULL: '\ue000'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.NULL" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NULL</code><em class="property"> = '\ue000'</em><a class="headerlink" href="#macaca.keys.Keys.NULL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.NUMPAD0">
-<code class="descname">NUMPAD0</code><em class="property"> = &lt;Keys.NUMPAD0: '\ue01a'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD0" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NUMPAD0</code><em class="property"> = '\ue01a'</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD0" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.NUMPAD1">
-<code class="descname">NUMPAD1</code><em class="property"> = &lt;Keys.NUMPAD1: '\ue01b'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD1" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NUMPAD1</code><em class="property"> = '\ue01b'</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.NUMPAD2">
-<code class="descname">NUMPAD2</code><em class="property"> = &lt;Keys.NUMPAD2: '\ue01c'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NUMPAD2</code><em class="property"> = '\ue01c'</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.NUMPAD3">
-<code class="descname">NUMPAD3</code><em class="property"> = &lt;Keys.NUMPAD3: '\ue01d'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD3" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NUMPAD3</code><em class="property"> = '\ue01d'</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.NUMPAD4">
-<code class="descname">NUMPAD4</code><em class="property"> = &lt;Keys.NUMPAD4: '\ue01e'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD4" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NUMPAD4</code><em class="property"> = '\ue01e'</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.NUMPAD5">
-<code class="descname">NUMPAD5</code><em class="property"> = &lt;Keys.NUMPAD5: '\ue01f'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD5" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NUMPAD5</code><em class="property"> = '\ue01f'</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD5" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.NUMPAD6">
-<code class="descname">NUMPAD6</code><em class="property"> = &lt;Keys.NUMPAD6: '\ue020'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD6" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NUMPAD6</code><em class="property"> = '\ue020'</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD6" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.NUMPAD7">
-<code class="descname">NUMPAD7</code><em class="property"> = &lt;Keys.NUMPAD7: '\ue021'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD7" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NUMPAD7</code><em class="property"> = '\ue021'</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD7" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.NUMPAD8">
-<code class="descname">NUMPAD8</code><em class="property"> = &lt;Keys.NUMPAD8: '\ue022'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD8" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NUMPAD8</code><em class="property"> = '\ue022'</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD8" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.NUMPAD9">
-<code class="descname">NUMPAD9</code><em class="property"> = &lt;Keys.NUMPAD9: '\ue023'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD9" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NUMPAD9</code><em class="property"> = '\ue023'</em><a class="headerlink" href="#macaca.keys.Keys.NUMPAD9" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.PAGE_DOWN">
-<code class="descname">PAGE_DOWN</code><em class="property"> = &lt;Keys.PAGE_DOWN: '\ue00f'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.PAGE_DOWN" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PAGE_DOWN</code><em class="property"> = '\ue00f'</em><a class="headerlink" href="#macaca.keys.Keys.PAGE_DOWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.PAGE_UP">
-<code class="descname">PAGE_UP</code><em class="property"> = &lt;Keys.PAGE_UP: '\ue00e'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.PAGE_UP" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PAGE_UP</code><em class="property"> = '\ue00e'</em><a class="headerlink" href="#macaca.keys.Keys.PAGE_UP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.PAUSE">
-<code class="descname">PAUSE</code><em class="property"> = &lt;Keys.PAUSE: '\ue00b'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.PAUSE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PAUSE</code><em class="property"> = '\ue00b'</em><a class="headerlink" href="#macaca.keys.Keys.PAUSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.POWER">
+<code class="descname">POWER</code><em class="property"> = '\ue101'</em><a class="headerlink" href="#macaca.keys.Keys.POWER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.RETURN">
-<code class="descname">RETURN</code><em class="property"> = &lt;Keys.RETURN: '\ue006'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.RETURN" title="Permalink to this definition">¶</a></dt>
+<code class="descname">RETURN</code><em class="property"> = '\ue006'</em><a class="headerlink" href="#macaca.keys.Keys.RETURN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.SEARCH">
+<code class="descname">SEARCH</code><em class="property"> = '\ue10b'</em><a class="headerlink" href="#macaca.keys.Keys.SEARCH" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.SEMICOLON">
-<code class="descname">SEMICOLON</code><em class="property"> = &lt;Keys.SEMICOLON: '\ue018'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.SEMICOLON" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SEMICOLON</code><em class="property"> = '\ue018'</em><a class="headerlink" href="#macaca.keys.Keys.SEMICOLON" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.SEPARATOR">
-<code class="descname">SEPARATOR</code><em class="property"> = &lt;Keys.SEPARATOR: '\ue026'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.SEPARATOR" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SEPARATOR</code><em class="property"> = '\ue026'</em><a class="headerlink" href="#macaca.keys.Keys.SEPARATOR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.SHIFT">
-<code class="descname">SHIFT</code><em class="property"> = &lt;Keys.SHIFT: '\ue008'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.SHIFT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SHIFT</code><em class="property"> = '\ue008'</em><a class="headerlink" href="#macaca.keys.Keys.SHIFT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.SPACE">
-<code class="descname">SPACE</code><em class="property"> = &lt;Keys.SPACE: '\ue00d'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.SPACE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SPACE</code><em class="property"> = '\ue00d'</em><a class="headerlink" href="#macaca.keys.Keys.SPACE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.SUBTRACT">
-<code class="descname">SUBTRACT</code><em class="property"> = &lt;Keys.SUBTRACT: '\ue027'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.SUBTRACT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SUBTRACT</code><em class="property"> = '\ue027'</em><a class="headerlink" href="#macaca.keys.Keys.SUBTRACT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.TAB">
-<code class="descname">TAB</code><em class="property"> = &lt;Keys.TAB: '\ue004'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.TAB" title="Permalink to this definition">¶</a></dt>
+<code class="descname">TAB</code><em class="property"> = '\ue004'</em><a class="headerlink" href="#macaca.keys.Keys.TAB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.VOLUME_DOWN">
+<code class="descname">VOLUME_DOWN</code><em class="property"> = '\ue103'</em><a class="headerlink" href="#macaca.keys.Keys.VOLUME_DOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.VOLUME_MUTE">
+<code class="descname">VOLUME_MUTE</code><em class="property"> = '\ue104'</em><a class="headerlink" href="#macaca.keys.Keys.VOLUME_MUTE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="macaca.keys.Keys.VOLUME_UP">
+<code class="descname">VOLUME_UP</code><em class="property"> = '\ue102'</em><a class="headerlink" href="#macaca.keys.Keys.VOLUME_UP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="macaca.keys.Keys.ZENKAKU_HANKAKU">
-<code class="descname">ZENKAKU_HANKAKU</code><em class="property"> = &lt;Keys.ZENKAKU_HANKAKU: '\ue040'&gt;</em><a class="headerlink" href="#macaca.keys.Keys.ZENKAKU_HANKAKU" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ZENKAKU_HANKAKU</code><em class="property"> = '\ue040'</em><a class="headerlink" href="#macaca.keys.Keys.ZENKAKU_HANKAKU" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2848,7 +2930,7 @@ a base64 encoded string.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/api.txt"
+      <li><a href="_sources/api.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -2867,14 +2949,14 @@ a base64 encoded string.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2016, zenzhu.
+      &copy;2017, zenzhu.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
-      <a href="_sources/api.txt"
+      <a href="_sources/api.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

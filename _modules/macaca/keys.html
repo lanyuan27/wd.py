@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>macaca.keys &mdash; wd.py 0.1.5 documentation</title>
+    <title>macaca.keys &#8212; wd.py 0.1.6 documentation</title>
     
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,17 +14,18 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.1.5',
+        VERSION:     '0.1.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="wd.py 0.1.5 documentation" href="../../index.html" />
-    <link rel="up" title="Module code" href="../index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -43,6 +44,7 @@
   <h1>Source code for macaca.keys</h1><div class="highlight"><pre>
 <span></span><span class="c1">#</span>
 <span class="c1"># Keys for WebDriver</span>
+<span class="c1"># keycode: https://github.com/macacajs/webdriver-keycode/blob/master/lib/webdriver-keycode.js</span>
 <span class="c1">#</span>
 
 <span class="kn">from</span> <span class="nn">enum</span> <span class="k">import</span> <span class="n">Enum</span>
@@ -109,7 +111,24 @@
     <span class="n">F12</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\ue03c</span><span class="s1">&#39;</span>
     <span class="n">META</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\ue03d</span><span class="s1">&#39;</span>
     <span class="n">COMMAND</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\ue03d</span><span class="s1">&#39;</span>
-    <span class="n">ZENKAKU_HANKAKU</span>	<span class="o">=</span> <span class="s1">&#39;</span><span class="se">\ue040</span><span class="s1">&#39;</span></div>
+    <span class="n">ZENKAKU_HANKAKU</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\ue040</span><span class="s1">&#39;</span>
+    <span class="c1"># https://github.com/alibaba/macaca/issues/487</span>
+    <span class="n">POWER</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE101</span><span class="s1">&#39;</span>
+    <span class="n">VOLUME_UP</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE102</span><span class="s1">&#39;</span>
+    <span class="n">VOLUME_DOWN</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE103</span><span class="s1">&#39;</span>
+    <span class="n">VOLUME_MUTE</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE104</span><span class="s1">&#39;</span>
+    <span class="n">HOME_SCREEN</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE105</span><span class="s1">&#39;</span>
+    <span class="n">BACK</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE106</span><span class="s1">&#39;</span>
+    <span class="n">MENU</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE107</span><span class="s1">&#39;</span>
+    <span class="n">CAMERA</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE108</span><span class="s1">&#39;</span>
+    <span class="n">CALL</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE109</span><span class="s1">&#39;</span>
+    <span class="n">END_CALL</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE10A</span><span class="s1">&#39;</span>
+    <span class="n">SEARCH</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE10B</span><span class="s1">&#39;</span>
+    <span class="n">DPAD_LEFT</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE10C</span><span class="s1">&#39;</span>
+    <span class="n">DPAD_UP</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE10D</span><span class="s1">&#39;</span>
+    <span class="n">DPAD_RIGHT</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE10E</span><span class="s1">&#39;</span>
+    <span class="n">DPAD_DOWN</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE10F</span><span class="s1">&#39;</span>
+    <span class="n">DPAD_CENTER</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\uE110</span><span class="s1">&#39;</span></div>
 </pre></div>
 
           </div>
@@ -140,10 +159,10 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2016, zenzhu.
+      &copy;2017, zenzhu.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
     </div>
