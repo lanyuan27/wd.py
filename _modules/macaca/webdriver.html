@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>macaca.webdriver &#8212; wd.py 0.1.7 documentation</title>
+    <title>macaca.webdriver &#8212; wd.py 0.1.10 documentation</title>
     
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.1.7',
+        VERSION:     '0.1.10',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -55,7 +55,7 @@
 <span class="kn">from</span> <span class="nn">.command</span> <span class="k">import</span> <span class="n">Command</span>
 <span class="kn">from</span> <span class="nn">.locator</span> <span class="k">import</span> <span class="n">Locator</span>
 <span class="kn">from</span> <span class="nn">.remote_invoker</span> <span class="k">import</span> <span class="n">RemoteInvoker</span>
-<span class="kn">from</span> <span class="nn">.util</span> <span class="k">import</span> <span class="n">add_element_extension_method</span><span class="p">,</span> <span class="n">value_to_key_strokes</span><span class="p">,</span> <span class="n">fluent</span>
+<span class="kn">from</span> <span class="nn">.util</span> <span class="k">import</span> <span class="n">add_element_extension_method</span><span class="p">,</span> <span class="n">value_to_key_strokes</span><span class="p">,</span> <span class="n">value_to_single_key_strokes</span><span class="p">,</span> <span class="n">fluent</span>
 <span class="kn">from</span> <span class="nn">.webdriverresult</span> <span class="k">import</span> <span class="n">WebDriverResult</span>
 <span class="kn">from</span> <span class="nn">.webdriverexception</span> <span class="k">import</span> <span class="n">WebDriverException</span>
 <span class="kn">from</span> <span class="nn">.webelement</span> <span class="k">import</span> <span class="n">WebElement</span>
@@ -512,30 +512,18 @@
         <span class="p">})</span></div>
 
     <span class="nd">@fluent</span>
-<div class="viewcode-block" id="WebDriver.swipe"><a class="viewcode-back" href="../../api.html#macaca.webdriver.WebDriver.swipe">[docs]</a>    <span class="k">def</span> <span class="nf">swipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">startX</span><span class="p">,</span> <span class="n">startY</span><span class="p">,</span> <span class="n">endX</span><span class="p">,</span> <span class="n">endY</span><span class="p">,</span> <span class="n">duration</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Deprecated use touch(&#39;drag&#39;, { fromX, fromY, toX, toY, duration(s) }) instead.</span>
-<span class="sd">            Swipe on the touch screen using finger motion events.</span>
+<div class="viewcode-block" id="WebDriver.keys"><a class="viewcode-back" href="../../api.html#macaca.webdriver.WebDriver.keys">[docs]</a>    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Send a sequence of key strokes.</span>
 
 <span class="sd">        Support:</span>
-<span class="sd">            Android iOS</span>
+<span class="sd">            Android iOS Web(WebView)</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            startX(Float): The x-coordinate of start point.</span>
-<span class="sd">            startY(Float): The y-coordinate of start point.</span>
-<span class="sd">            endX(Float): The x-coordinate of end point.</span>
-<span class="sd">            endY(Float): The y-coordinate of end point.</span>
-<span class="sd">            duration(Float): The duration in ms.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            WebDriver object.</span>
+<span class="sd">            value(str|int|list): value can be a string,</span>
+<span class="sd">              int or a list contains defined Keys.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">SWIPE_ELEMENT</span><span class="p">,</span> <span class="p">{</span>
-            <span class="s1">&#39;element_id&#39;</span><span class="p">:</span> <span class="s1">&#39;temp&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;startX&#39;</span><span class="p">:</span> <span class="n">startX</span><span class="p">,</span>
-            <span class="s1">&#39;startY&#39;</span><span class="p">:</span> <span class="n">startY</span><span class="p">,</span>
-            <span class="s1">&#39;endX&#39;</span><span class="p">:</span> <span class="n">endX</span><span class="p">,</span>
-            <span class="s1">&#39;endY&#39;</span><span class="p">:</span> <span class="n">endY</span><span class="p">,</span>
-            <span class="s1">&#39;duration&#39;</span><span class="p">:</span> <span class="n">duration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">SEND_KEYS_TO_ACTIVE_ELEMENT</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">value_to_single_key_strokes</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="p">})</span></div>
 
     <span class="nd">@fluent</span>
